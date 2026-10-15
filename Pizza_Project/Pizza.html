@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive pizza-ordering menu built with HTML, CSS, and JavaScript.">
+  <title>Pizza Drill Tutorial</title>
+  <link rel="stylesheet" href="Pizza_CSS/Pizza.css">
+  <script src="Pizza_JavaScript/Pizza.js" defer></script>
+</head>
+<body>
+  <main id="menuBG">
+    <h1>Pizza Drill Tutorial</h1>
+
+    <form id="pizza-form">
+      <button id="btnOrder" type="submit">Place Order</button>
+
+      <div id="frmMenu">
+        <fieldset class="menu-column">
+          <legend>Size:</legend>
+          <p class="menu-hint">Choose one size.</p>
+          <label><input class="size" type="radio" name="size" value="Personal Pizza" data-price="6" required> Personal Pizza</label>
+          <label><input class="size" type="radio" name="size" value="Small Pizza" data-price="8"> Small Pizza</label>
+          <label><input class="size" type="radio" name="size" value="Medium Pizza" data-price="10"> Medium Pizza</label>
+          <label><input class="size" type="radio" name="size" value="Large Pizza" data-price="14" checked> Large Pizza</label>
+          <label><input class="size" type="radio" name="size" value="Extra Large Pizza" data-price="16"> Extra Large Pizza</label>
+        </fieldset>
+
+        <fieldset class="menu-column">
+          <legend>Vegetables:</legend>
+          <p class="menu-hint">Choose any vegetables.</p>
+          <label><input class="toppings" type="checkbox" name="topping" value="Mushrooms"> Mushrooms</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Onions"> Onions</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Tomatoes"> Tomatoes</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Olives"> Olives</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Green Peppers"> Green Peppers</label>
+        </fieldset>
+
+        <fieldset class="menu-column">
+          <legend>Meats:</legend>
+          <p class="menu-hint">Choose any meats.</p>
+          <label><input class="toppings" type="checkbox" name="topping" value="Pepperoni"> Pepperoni</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Sausage"> Sausage</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Canadian Bacon"> Canadian Bacon</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Ground Beef"> Ground Beef</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Anchovy"> Anchovy</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Chicken"> Chicken</label>
+          <label><input class="toppings" type="checkbox" name="topping" value="Salami"> Salami</label>
+        </fieldset>
+      </div>
+
+      <p class="price-note">One topping is free. Each additional topping costs $1.</p>
+      <section id="order-summary" aria-live="polite" aria-labelledby="receipt-heading" hidden>
+        <h2 id="receipt-heading">Your Order</h2>
+        <p id="receipt-size"></p>
+        <p id="receipt-toppings"></p>
+        <p id="receipt-base"></p>
+        <p id="receipt-extras"></p>
+        <p id="receipt-total"></p>
+        <p id="receipt-note"></p>
+      </section>
+    </form>
+  </main>
+</body>
+</html>
